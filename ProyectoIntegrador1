@@ -1,0 +1,17 @@
+El proyecto se compone de 3 partes básicamente, en cuanto a código y datos:
+
+A. 
+
+B. El bucket 'argandybucket' en AWS Amazon que contiene las acciones del índice S&P500 junto con su EDA:
+ https://argandybucket.s3.amazonaws.com/3Trusted/sp500mcda/syp500.zip
+
+C. El modelo de regresión llevado a cabo para las predicciones del valor de las acciones:
+   El link se encuentra público y basta con copiar - pegar en el navegador:
+https://colab.research.google.com/drive/139yQPLIuJzMoBNC8xJtBjoixupYu9Dc_?usp=sharing
+
+
+Los pasos para ejecutar el proyecto son los siguientes:
+
+1. Ejecutar el código de Lambda (punto A, ver arriba)
+2. Con este código, se obtienen los archivos del punto B (ver arriba), que en un .zip se almacenan en el bucket
+3. Este archivo .zip (obtenido en el paso 2) es el que alimenta al modelo del punto C (ver arriba) para obtener las predicciones requeridas
