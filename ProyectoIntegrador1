@@ -1,9 +1,10 @@
 El proyecto se compone de 3 partes básicamente, en cuanto a código y datos:
 
-A. 
+A.  Archivo .txt "CodPI1.LambdaAWS.txt" que es el que se encuentra en Amazon Lambda de manera no pública, bajo el siguiente ARN: 
+arn:aws:lambda:us-east-1:284777752017:function:acciones-yahoo
 
 B. El bucket 'argandybucket' en AWS Amazon que contiene las acciones del índice S&P500 junto con su EDA:
- https://argandybucket.s3.amazonaws.com/3Trusted/sp500mcda/syp500.zip
+https://argandybucket.s3.amazonaws.com/3Trusted/sp500mcda/syp500.zip
 
 C. El modelo de regresión llevado a cabo para las predicciones del valor de las acciones:
    El link se encuentra público y basta con copiar - pegar en el navegador:
@@ -14,4 +15,5 @@ Los pasos para ejecutar el proyecto son los siguientes:
 
 1. Ejecutar el código de Lambda (punto A, ver arriba)
 2. Con este código, se obtienen los archivos del punto B (ver arriba), que en un .zip se almacenan en el bucket
-3. Este archivo .zip (obtenido en el paso 2) es el que alimenta al modelo del punto C (ver arriba) para obtener las predicciones requeridas
+3. Este archivo .zip (obtenido en el paso 2) se debe descargar en la máquina local o subir al Drive para poder alimentar al modelo del punto C (ver arriba) para obtener 
+   las predicciones requeridas
